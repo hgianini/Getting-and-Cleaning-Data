@@ -1,10 +1,11 @@
 # Getting and Cleanind Data - Course Project
-# Student - Author: Hern·n Gianini
+# Student - Author: Hern√°n Gianini
 #
 # Part 1: Merges the training and the test sets to create one data set.
 #
 # Set the working directory
 setwd("C:/Users/hgian/OneDrive/Desktop/datasciencecoursera/Getting and Cleaning Data/Course Project")
+library(dplyr)
 #
 # Get de project data
 if(!file.exists("./data")){dir.create("./data")}
