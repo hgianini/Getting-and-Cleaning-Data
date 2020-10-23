@@ -3,6 +3,8 @@
 # Getting and Cleanind Data - Course Project  
 # Student - Author: Hernán Gianini  
 #  
+*The following describes the script that starts from the input files "train" and "test" and ends with the tidy data set requested in the project.*  
+*The script operates continuously and consists of 5 parts, according to the stages requested in the project.*
 # Part 1: Merges the training and the test sets to create one data set.  
 #  
 ## Set the working directory  
