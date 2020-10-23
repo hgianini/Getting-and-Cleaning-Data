@@ -45,15 +45,15 @@ The following consecutive steps are applied to the input data to generate the fi
 (the corresponding R code is delivered in the run_analysis.R file in this same repository):  
   
 a) Merges the training and the test sets to create one data set  
-  	i) Get the project data (this is not the R code, it is conceptual pseudo-language):  
-    		- subject_train <- "subject_train.txt"  
-		- subject_test  <- "subject_test.txt"  
-		- activity_train <- "Y_train.txt"  
-		- activity_test <- "Y_test.txt"  
-		- features_test  <- "X_test.txt"  
-		- features_train  <- "X_train.txt"  
-	ii) Merge the test and train files:  
-		- Concatenate the train and test subject, activity and features files by row  
-		- Set names to columns (variables)  
-		- Combine the three resulting files by column to conform one data file (denominated "alldata")  
+| 	i) Get the project data (this is not the R code, it is conceptual pseudo-language):  
+|   		- subject_train <- "subject_train.txt"  
+|		- subject_test  <- "subject_test.txt"  
+|		- activity_train <- "Y_train.txt"  
+|		- activity_test <- "Y_test.txt"  
+|		- features_test  <- "X_test.txt"  
+|		- features_train  <- "X_train.txt"  
+|	ii) Merge the test and train files:  
+|		- Concatenate the train and test subject, activity and features files by row  
+|		- Set names to columns (variables)  
+|		- Combine the three resulting files by column to conform one data file (denominated "alldata")  
 		
