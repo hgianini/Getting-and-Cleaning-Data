@@ -62,8 +62,7 @@ alldata <- cbind(data1, features_file)
 str(alldata)  
 tail(alldata)  
 #  
-# Part 2: Extracts only the measurements on the mean and standard deviation  
-#         for each mex <-asurement.  
+# Part 2: Extracts only the measurements on the mean and standard deviation.     
 #  
 colums <- grep("subject|activity|mean\\(\\)|std\\(\\)",names(alldata))  
 meanstd_file <- subset(alldata, select = colums)  
@@ -91,7 +90,7 @@ names(meanstd_file)<-gsub("-mean\\(\\)", "Mean", names(meanstd_file))
 names(meanstd_file)<-gsub("-std\\(\\)", "STD", names(meanstd_file))  
 str(meanstd_file)  
 #  
-# Part 5: From the data set in step 4, creates a second, independent tidy data set  
+# Part 5: From the data set in step 4, creates a second, independent tidy data set    
 #         with the average of each variable for each activity and each subject.  
 #  
 TidyData <- meanstd_file %>%  
