@@ -1,32 +1,32 @@
-# Getting-and-Cleaning-Data
-"Getting and Cleaning Data" Course Project Repository
-# Getting and Cleanind Data - Course Project
-# Student - Author: Hernán Gianini
-#
-# Part 1: Merges the training and the test sets to create one data set.
-#
-# Set the working directory
-setwd("C:/Users/hgian/OneDrive/Desktop/datasciencecoursera/Getting and Cleaning Data/Course Project")
-library(dplyr)
-#
-# Get de project data
-if(!file.exists("./data")){dir.create("./data")}
-dataurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"
-download.file(dataurl,destfile="./data/Dataset.zip")
-unzip(zipfile="./data/Dataset.zip",exdir="./data")
-path_data <- file.path("./data" , "UCI HAR Dataset")
-datafiles <- list.files(path_data, recursive=TRUE)
-datafiles
-#
-# Read the subject files
-subject_train <- read.table(file.path(path_data, "train", "subject_train.txt"),header = FALSE)
-str(subject_train)
-tail(subject_train)
-subject_test  <- read.table(file.path(path_data, "test" , "subject_test.txt"),header = FALSE)
-str(subject_test)
-tail(subject_test)
-#
-# Read the activity files
+# Getting-and-Cleaning-Data  
+"Getting and Cleaning Data" Course Project Repository  
+# Getting and Cleanind Data - Course Project  
+# Student - Author: Hernán Gianini  
+#  
+# Part 1: Merges the training and the test sets to create one data set.  
+#  
+# Set the working directory  
+setwd("C:/Users/hgian/OneDrive/Desktop/datasciencecoursera/Getting and Cleaning Data/Course Project")  
+library(dplyr)  
+#  
+# Get de project data  
+if(!file.exists("./data")){dir.create("./data")}  
+dataurl <- "https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip"  
+download.file(dataurl,destfile="./data/Dataset.zip")  
+unzip(zipfile="./data/Dataset.zip",exdir="./data")  
+path_data <- file.path("./data" , "UCI HAR Dataset")  
+datafiles <- list.files(path_data, recursive=TRUE)  
+datafiles  
+#  
+# Read the subject files  
+subject_train <- read.table(file.path(path_data, "train", "subject_train.txt"),header = FALSE)  
+str(subject_train)  
+tail(subject_train)  
+subject_test  <- read.table(file.path(path_data, "test" , "subject_test.txt"),header = FALSE)  
+str(subject_test)  
+tail(subject_test)  
+#  
+# Read the activity files  
 activity_train <- read.table(file.path(path_data, "train", "Y_train.txt"),header = FALSE)
 str(activity_train)
 tail(activity_train)
