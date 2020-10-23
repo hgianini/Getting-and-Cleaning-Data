@@ -94,7 +94,7 @@ str(meanstd_file)
 #         with the average of each variable for each activity and each subject.  
 #  
 TidyData <- meanstd_file %>%  
-    group_by(subject, activity) %>%  
-    summarise_all(funs(mean))  
+        group_by(subject, activity) %>%  
+        summarise_all(funs(mean))  
 str(TidyData)  
 write.table(TidyData, "TidyData.txt", row.name=FALSE)  
